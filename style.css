@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F5F6FA;
+    font-family: 'Rubik';
+}
+#comment-section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.comment {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    margin-top: 20px;
+    /* width: 730px; */
+    padding: 20px; /* Adjust the padding value to your desired spacing */
+    border-radius: 10px;
+    /* Add min-height to ensure the comments have a minimum height */
+    min-height: 150px; /* You can adjust this value as needed */
+  }
+.comment-user{
+    margin-left: 136px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.comment-timestamp{
+    margin-left: 250px;
+    position: absolute;
+    color: #67727E;
+}
+.comment p{
+    margin-left: 88px;
+    width: 618px;
+}
+.reply-mention{
+    margin-left: 88px;
+    color: #5357B6;
+    font-weight: 500;
+}
+.user-profile-picture{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    margin-left: 88px;
+}
+.score-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 30px; */
+    /* margin-top: 10px; */
+    background-color: #F5F6FA;
+    width: 40px;
+    border-radius: 10px;
+    color: #5357B6;
+    font-weight: 500;
+    padding: 10px; /* Adjust the padding value to match the comment's padding */
+  }
+.score-text{
+    text-align: center;
+}
+.upvote-button, .downvote-button{
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: none;
+    cursor: pointer;
+}
+.reply-comment{
+    color: #5357B6;
+}
+.reply-comment:hover{
+    color: #C5C6EF;
+}
+.delete-comment {
+    color: #ED6368;
+    position: absolute;
+    right: 24px;
+    /* Remove margin-left: 570px; */
+    border: none;
+    background: none;
+    font-family: 'Rubik';
+    font-weight: 500;
+    cursor: pointer;
+    /* Add the following properties to position the button */
+    top: 26px;
+    transform: translateY(-50%);
+  }
+  
+.delete-comment:hover{
+    color: #FFB8BB;
+}
+.reply-comment{
+    position: absolute;
+    right: 24px;
+    border: none;
+    background: none;
+    font-family: 'Rubik';
+    font-weight: 500;
+    cursor: pointer;
+}
+.reply-section{
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    width: 642px;
+}
+.reply-section p{
+    width: 530px;
+}
+#comment-form{
+    display: flex;
+    justify-content: center;
+    background-color: #FFFFFF;
+    margin-top: 20px;
+    width: 730px;
+    height: 144px;
+    border-radius: 10px;
+}
+#comment-input{
+    margin-top: 24px;
+    width: 506px;
+    height: 96px;
+    border-radius: 10px;
+    border: 2px solid #E9EBF0;
+}
+#comment-input:focus{
+    outline: 2px solid #5357B6;
+}
+.submitBTN{
+    margin-top: 24px;
+    margin-left: 16px;
+    width: 104px;
+    height: 48px;
+    border-radius: 10px;
+    border: none;
+    background-color: #5357B6;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'Rubik';
+    font-weight: 500;
+}
+.submitBTN:hover{
+    background-color: #C5C6EF;
+}
+.replyFormInput{
+    justify-content: center;
+}
+.replyInput{
+    width: 506px;
+    height: 96px;
+    margin-top: 32px;
+    border-radius: 10px;
+    border: 2px solid #E9EBF0;
+}
+.replyInput:focus{
+    outline: 2px solid #5357B6;
+}
+.replyBTN{
+    width: 104px;
+    height: 48px;
+    margin-top: 32px;
+    margin-left: 16px;
+    background-color: #5357B6;
+    border-radius: 10px;
+    border: none;
+    color: #ffffff;
+    font-family: 'Rubik';
+    font-weight: 500;
+    cursor: pointer;
+}
+.replyBTN:hover{
+    background-color: #C5C6EF;
+}
+.reply-line{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #E9EBF0;
+    left: -20px;
+    top: 10px;
+}
+.edit-button {
+    width: 50px;
+    font-weight: 500;
+    font-family: 'Rubik';
+    border: none;
+    color: #5357B6;
+    cursor: pointer;
+    /* Remove margin-left: 570px; */
+    background: none;
+    /* Add the following properties to position the button */
+    position: absolute;
+    right: 102px;
+    top: 26px;
+    transform: translateY(-50%);
+  }
+.edit-button:hover{
+    color: #C5C6EF;
+}
+
+
+#modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000003c;
+    backdrop-filter: blur(8px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+#modal-container p{
+    width: 336px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#modal-container button{
+    width: 161px;
+    height: 48px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 10px;
+    font-family: "Rubik";
+
+}
+#modal-container.active {
+    display: flex;
+}
+#confirm-delete{
+    background-color: #ED6368;
+    color: #ffffff;
+    cursor: pointer;
+}
+#confirm-delete:hover{
+    background-color: #FFB8BB;
+}
+#cancel-delete{
+    background-color: #67727E;
+    color: #ffffff;
+    cursor: pointer;
+}
+#cancel-delete:hover{
+    background-color: #949393;
+}
+
+@media only screen and (max-width: 667px) {
+
+.comment p{
+    width: 343px;
+    padding-bottom: 50px;
+}
+.reply-section{
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+}
+.reply-section p{
+    width: 250px;
+}
+.reply-comment{
+    bottom: 34px;
+    z-index: 1;
+}
+.delete-comment{
+    top: 250px;
+    right: 100px;
+}
+#comment-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30px;
+    width: 400px;
+}
+.submitBTN{
+    margin-left: 210px;
+}
+#comment-input{
+    width: 312px;
+}
+.score-container{
+    margin-top: 40px;
+}
+.score-text{
+    margin-top: 8px;
+}
+.replyInput{
+    width: 311px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+.replyBTN{
+    margin-top: 0px;
+}
+.edit-button{
+    bottom: 50px;
+    right: 20px;
+}
+
+}
